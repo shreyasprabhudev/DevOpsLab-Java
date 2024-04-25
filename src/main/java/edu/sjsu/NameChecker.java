@@ -11,8 +11,14 @@ public class NameChecker {
      * @return True if input is a valid name, else false
      */
     public static boolean check(String input) {
-        // TODO: implement
+        if (input.length() < 2 || input.length() > 40) {
+            return false;
+        }
 
-        return false;
+        if (input.startsWith("-") || input.startsWith("'")) {
+            return false;
+        }
+
+        return input.matches("[A-Za-z]([A-Za-z'\\-]*[A-Za-z'])?");
     }
 }
