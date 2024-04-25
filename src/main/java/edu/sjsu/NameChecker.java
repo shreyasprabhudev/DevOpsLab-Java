@@ -19,7 +19,8 @@ public class NameChecker {
             return false;
         }
 
-        return input.matches("[A-Za-z]([A-Za-z]|((?<!['\\-])['\\-](?=[A-Za-z])))*[A-Za-z']?");
+        return input.matches("[A-Za-z]([A-Za-z]|((?<!['\\-])['\\-](?=[A-Za-z])))*[A-Za-z]");
+
 
     }
 }
